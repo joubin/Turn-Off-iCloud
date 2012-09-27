@@ -1,0 +1,13 @@
+display dialog "Save all of your files on any iWork Application.
+What would you like" buttons {"Set iCloud as default save", "Turn off iCloud as defualt Save"}
+if button returned of result = "Turn off iCloud as defualt Save" then
+	do shell script "defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false "
+else
+	do shell script " defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool true "
+end if
+display dialog "Okay. Done! 
+You have to quit all of the applications in questions for the changes to take place.
+Enjoy.
+All Rights Reserved Joubin Jabbari 2012
+"
+"
